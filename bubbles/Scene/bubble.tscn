@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxefchf3uy586"]
+
+[ext_resource type="Texture2D" uid="uid://brlgd2we04egi" path="res://Assets/12927_2.jpg" id="1_73nid"]
+
+[node name="bubble" type="Node2D"]
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(589, 332)
+scale = Vector2(0.152372, 0.152372)
+texture = ExtResource("1_73nid")

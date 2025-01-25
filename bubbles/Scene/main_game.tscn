@@ -1,0 +1,79 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkr2km5d8qlt"]
+
+[ext_resource type="Texture2D" uid="uid://bgmhuco2p2cxc" path="res://Assets/icon.svg" id="1_2nl3s"]
+[ext_resource type="Texture2D" uid="uid://cstlr7d2gqlch" path="res://Assets/blue-background-32BDE9-45b80679.jpg" id="1_b8i2q"]
+[ext_resource type="Script" path="res://Scene/player.gd" id="2_xalbb"]
+[ext_resource type="PackedScene" uid="uid://bxefchf3uy586" path="res://Scene/bubble.tscn" id="4_84x8r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_873p2"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13494, 16507)
+scale = Vector2(-105.312, -105.312)
+texture = ExtResource("1_b8i2q")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(560, 289)
+script = ExtResource("2_xalbb")
+
+[node name="Collider" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1, -1)
+scale = Vector2(-9.37321, -9.37321)
+shape = SubResource("CircleShape2D_873p2")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+position = Vector2(0, -2)
+texture = ExtResource("1_2nl3s")
+
+[node name="Bubble_time" type="Timer" parent="Player"]
+wait_time = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(15, 30)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Bubbles" type="Node2D" parent="CanvasLayer"]
+position = Vector2(542, 306)
+
+[node name="bubble" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(32, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble2" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-72, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble3" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-175, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble4" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-279, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble5" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-382, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble6" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-486, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble7" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-589, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble8" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-693, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble9" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-801, 21)
+scale = Vector2(0.74951, 0.74951)
+
+[node name="bubble10" parent="CanvasLayer/Bubbles" instance=ExtResource("4_84x8r")]
+position = Vector2(-905, 21)
+scale = Vector2(0.74951, 0.74951)
