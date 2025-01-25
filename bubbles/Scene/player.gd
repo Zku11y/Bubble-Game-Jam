@@ -18,8 +18,7 @@ func _ready() -> void:
 	for i in range(0, 10):
 		bubble_count.append(bubbles.get_child(i))
 
-
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	#print(timer.time_left)
 	if timer.time_left < 0.2:
 		print("timeout! ", timer.time_left)
@@ -33,6 +32,8 @@ func _physics_process(delta: float) -> void:
 		dmg_taken = 1
 	if Input.is_action_just_pressed("add"):
 		bubbles_taken = 1
+
+
 	
 func _set_state():
 	# add condition !pickup to switch between normal pickup and non pickup
