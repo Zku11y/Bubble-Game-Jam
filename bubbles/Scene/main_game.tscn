@@ -28,7 +28,7 @@ position = Vector2(0, -2)
 texture = ExtResource("1_2nl3s")
 
 [node name="Bubble_time" type="Timer" parent="Player"]
-wait_time = 3.0
+wait_time = 27.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(15, 30)
